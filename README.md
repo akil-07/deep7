@@ -7,7 +7,7 @@ To develop a convolutional autoencoder for image denoising application.
 
 This code implements a Denoising Autoencoder using PyTorch to clean noisy images from the MNIST dataset. It uses a convolutional neural network architecture, where the encoder compresses the input image into a lower-dimensional representation, and the decoder reconstructs the original image from this compressed form. To train the model to remove noise, Gaussian noise is added to the clean images, and the network learns to recover the original from the noisy version. The training process uses Mean Squared Error (MSE) as the loss function to measure the reconstruction error and the Adam optimizer to update the model weights. The autoencoder is trained over multiple epochs using mini-batches of data for efficiency. After training, the model's performance is visually evaluated by displaying the original, noisy, and denoised images side by side.
 
-<img width="642" height="483" alt="image" src="https://github.com/user-attachments/assets/49a369dd-3708-4cc7-8b6d-568acc757b22" />
+<img width="642" height="483" alt="image" src="./img_problem.png" />
 
 ## DESIGN STEPS
 ### STEP 1: 
@@ -31,9 +31,9 @@ Visualization and Analysis
 
 ## PROGRAM
 
-### Name: RAGA SUSANTH
+### Name: Akil S
 
-### Register Number:212224230217
+### Register Number:212225220007
 
 ```python
 # Autoencoder for Image Denoising using PyTorch
@@ -97,15 +97,15 @@ criterion = nn.MSELoss()
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 
 # Print model summary
-print('Name           :RAGA SUSANTH')
-print('Register Number:212224230217')
+print('Name           :Akil S')
+print('Register Number:212225220007')
 summary(model, input_size=(1, 28, 28))
 
 # Train the autoencoder
 def train(model, loader, criterion, optimizer, epochs=5):
     model.train()
-    print('Name           :RAGA SUSANTH')
-    print('Register Number:212224230217')
+    print('Name           :Akil S')
+    print('Register Number:212225220007')
 
     for epoch in range(epochs):
         running_loss = 0.0
@@ -141,8 +141,8 @@ def visualize_denoising(model, loader, num_images=10):
     noisy_images = noisy_images.cpu().numpy()
     outputs = outputs.cpu().numpy()
 
-    print('Name           :RAGA SUSANTH')
-    print('Register Number:212224230217')
+    print('Name           :Akil S')
+    print('Register Number:212225220007')
     plt.figure(figsize=(18, 6))
     for i in range(num_images):
         # Original
@@ -175,17 +175,17 @@ visualize_denoising(model, test_loader)
 
 ### Model Summary
 
-<img width="631" height="475" alt="image" src="https://github.com/user-attachments/assets/5fa6a3d4-13d1-44db-a29a-279c025d5030" />
+<img width="631" height="475" alt="image" src="./img_summary.png" />
 
 
 ### Training loss
 
-<img width="311" height="152" alt="image" src="https://github.com/user-attachments/assets/21705afe-333a-4f6e-8b2b-f42758fc57c0" />
+<img width="311" height="152" alt="image" src="./img_loss.png" />
 
 
 ## Original vs Noisy Vs Reconstructed Image
 
-<img width="1356" height="501" alt="image" src="https://github.com/user-attachments/assets/2894e167-8a80-4a49-a696-2937d412d35f" />
+<img width="1356" height="501" alt="image" src="./img_reconstruct.png" />
 
 
 ## RESULT
